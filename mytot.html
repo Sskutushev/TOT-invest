@@ -1,22 +1,68 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Мой сайт</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        header {
-            background: #222;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script> <!-- Подключаем скрипт -->
 </head>
 <body>
-    <header>
-        <h1>Добро пожаловать!</h1>
-        <p>Это шапка сайта</p>
-    </header>
+    <section> 
+    <!-- header-invest -->
+    <div class="header-invest">
+        <div class="frame">
+            <a href="#top" class="TOT-logo-link"> 
+                <img class="TOT-logo" src="img/TOT Logo.svg" />
+            </a>
+            <div class="frame">
+                <div class="frame-2">
+                    <div class="menu-button" data-lang="ru">
+                        <div class="text-wrapper">О проекте</div>
+                    </div>
+                    <div class="menu-button" data-lang="ru">
+                        <div class="text-wrapper">Потенциал</div>
+                    </div>
+                    <div class="menu-button" data-lang="ru">
+                        <div class="text-wrapper">Раунд инвестиций</div>
+                    </div>
+                    <div class="menu-button" data-lang="ru">
+                        <div class="text-wrapper">Контакты</div>
+                    </div>
+                    <div class="menu-button" data-lang="en">
+                        <div class="text-wrapper">About</div>
+                    </div>
+                    <div class="menu-button" data-lang="en">
+                        <div class="text-wrapper">Potential</div>
+                    </div>
+                    <div class="menu-button" data-lang="en">
+                        <div class="text-wrapper">Investment Round</div>
+                    </div>
+                    <div class="menu-button" data-lang="en">
+                        <div class="text-wrapper">Contacts</div>
+                    </div>
+                </div>
+                <div class="frame-wrapper">
+                    <div class="frame-3">
+                        <div class="language-flag"><div class="ellipse"></div></div>
+                        <div class="text-wrapper-2">Рус</div>
+                        <img class="icon-dropdown" src="img/Vector 2 (Stroke).svg" />
+                    </div>
+                    <!-- Dropdown меню для переключения языка -->
+                    <div class="language-dropdown">
+                        <button class="language-option" data-lang="ru">
+                            <div class="ellipse"></div> Русский
+                        </button>
+                        <button class="language-option" data-lang="en">
+                            <div class="ellipse"></div> English
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <div id="top"></div>
+
 </body>
 </html>

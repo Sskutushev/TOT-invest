@@ -1,0 +1,259 @@
+.header-invest {
+    display: flex;
+    height: 72px;
+    align-items: flex-start;
+    justify-content: center;  /* Оставьте здесь для выравнивания элементов по обе стороны */
+    gap: 10px;
+    padding: 13px 0px;
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header-invest .frame {
+    display: flex;
+    max-width: 1240px;
+    justify-content: flex-end;  /* Это изменяет выравнивание кнопок справа */
+    flex: 1;
+    flex-grow: 1;
+    align-items: center;
+    position: relative;
+}
+
+.header-invest .TOT-logo {
+    position: relative;
+    width: 117px;
+    height: 30px;
+}
+
+.header-invest .div {
+    display: inline-flex;
+    justify-content: flex-end;
+    gap: 30px;
+    align-items: center;
+    position: relative;
+}
+
+.header-invest .frame-2 {
+    display: inline-flex;
+    gap: 16px;
+    flex: 0 0 auto;
+    align-items: center;
+    position: relative;
+    margin-right: 30px;  /* Отступ справа до кнопки переключения языка */
+}
+
+.header-invest .menu-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 5px 10px;
+    position: relative;
+    flex: 0 0 auto;
+    cursor: pointer;  /* Устанавливаем курсор в виде руки */
+    color: #868686;  /* Цвет текста */
+    font-family: 'Open Sans', sans-serif;  /* Шрифт Open Sans */
+    font-size: 16px;  /* Размер шрифта */
+    line-height: 19px;  /* Высота строки */
+}
+.header-invest .menu-button:hover {
+    color: #000000;  /* Цвет текста при наведении (можно выбрать другой) */
+}
+.header-invest .text-wrapper {
+    position: relative;
+    width: fit-content;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    color: #868686;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 19px;
+    white-space: nowrap;
+    font-style: normal;
+}
+.header-invest .text-wrapper:hover {
+    color: #000000;  /* Цвет текста при наведении */
+}
+
+.header-invest .frame-wrapper {
+    display: inline-flex;
+    gap: 14px;
+    flex: 0 0 auto;
+    align-items: center;
+    position: relative;
+}
+
+.header-invest .frame-3 {
+    display: inline-flex;
+    gap: 8px;
+    padding: 9px 7px;
+    flex: 0 0 auto;
+    background-color: #F4F4F4 ;
+    border-radius: 90px;
+    overflow: hidden;
+    align-items: center;
+    position: relative;
+    cursor: pointer;  /* Устанавливаем курсор в виде руки */
+}
+
+.header-invest .language-rus {
+    position: relative;
+    width: 28px;
+    height: 28px;
+    background-image: url(./img/rus.svg);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+.header-invest .language-eng {
+    position: relative;
+    width: 28px;
+    height: 28px;
+    background-image: url(./img/eng.svg);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.header-invest .ellipse {
+    height: 28px;
+    border-radius: 14px;
+    border: 1px solid var(--primarydark);
+}
+
+.header-invest .text-wrapper-2 {
+    position: relative;
+    width: fit-content;
+    font-family: var(--desktop-body-text-open-sans-14-font-family);
+    font-weight: var(--desktop-body-text-open-sans-14-font-weight);
+    color: #000000;
+    font-size: var(--desktop-body-text-open-sans-14-font-size);
+    letter-spacing: var(--desktop-body-text-open-sans-14-letter-spacing);
+    line-height: var(--desktop-body-text-open-sans-14-line-height);
+    white-space: nowrap;
+    font-style: var(--desktop-body-text-open-sans-14-font-style);
+}
+
+.header-invest .frame-3 .icon-dropdown {
+    position: relative;
+    width: 12px;  /* Размер иконки стрелки вниз */
+    height: 12px;  /* Высота иконки стрелки вниз */
+}
+.header-invest .frame-3:hover {
+    background-color: #E0E0E0;  /* Цвет фона при наведении */
+}
+/* Скрытие элементов в зависимости от выбранного языка */
+[data-lang="en"] {
+    display: none;  /* Скрыть все элементы с атрибутом data-lang="en" по умолчанию */
+}
+
+[data-lang="ru"] {
+    display: block;  /* Показать все элементы с атрибутом data-lang="ru" по умолчанию */
+}
+
+/* Показать элементы при переключении языка */
+.lang-en [data-lang="en"] {
+    display: block;  /* Показываем элементы с data-lang="en" */
+}
+
+.lang-ru [data-lang="ru"] {
+    display: block;  /* Показываем элементы с data-lang="ru" */
+}
+
+.lang-en [data-lang="ru"],
+.lang-ru [data-lang="en"] {
+    display: none;  /* Скрываем элементы с противоположным языком */
+}
+
+/* Стили для выпадающего меню */
+.language-dropdown {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #F4F4F4;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+
+.language-option {
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 8px 15px;
+}
+
+.language-option:hover {
+    background-color: #E0E0E0;
+}
+
+.language-dropdown .ellipse {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-size: cover;
+}
+
+/* Стили для отображения флагов */
+.language-option[data-lang="ru"] .ellipse {
+    background-image: url('img/rus.svg');
+}
+
+.language-option[data-lang="en"] .ellipse {
+    background-image: url('img/eng.svg');
+}
+
+/* Скрытие выпадающего меню по умолчанию */
+.language-dropdown.active {
+    display: flex;
+}
+
+/* Стили для основного языка переключателя */
+.header-invest .frame-3 {
+    display: inline-flex;
+    gap: 8px;
+    padding: 9px 7px;
+    flex: 0 0 auto;
+    background-color: #F4F4F4;
+    border-radius: 90px;
+    overflow: hidden;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.header-invest .language-rus {
+    position: relative;
+    width: 28px;
+    height: 28px;
+    background-image: url(./img/rus.svg);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.header-invest .text-wrapper-2 {
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #000000;
+    font-weight: normal;
+}
+
+.header-invest .icon-dropdown {
+    position: relative;
+    width: 12px;
+    height: 12px;
+}
+
+.header-invest .frame-3:hover {
+    background-color: #E0E0E0;
+}
