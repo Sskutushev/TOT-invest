@@ -310,6 +310,9 @@ button {
     justify-content: center;
     align-items: center;
     color: white;
+    font-size: 18px;
+    font-family: Open Sans;
+    line-height: 20px;
     gap: 10px;
     border: none;
     cursor: pointer;
@@ -341,6 +344,7 @@ button {
     gap: 10px;
     position: relative;
     border: 1px solid var(--primarydark);
+    cursor: pointer;
 }
 
 /* Текст кнопки "Связаться с командой" */
