@@ -4,65 +4,397 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="utf-8" />
     <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script> <!-- Подключаем скрипт -->
+    <script src="script.js" defer></script>
 </head>
 <body>
+    <!-- Секция с хедером и меню -->
     <section> 
-    <!-- header-invest -->
-    <div class="header-invest">
-        <div class="frame">
-            <a href="#top" class="TOT-logo-link"> 
-                <img class="TOT-logo" src="img/TOT Logo.svg" />
-            </a>
+        <!-- header-invest -->
+        <div class="header-invest">
             <div class="frame">
-                <div class="frame-2">
-                    <div class="menu-button" data-lang="ru">
-                        <div class="text-wrapper">О проекте</div>
+                <a href="#top" class="TOT-logo-link"> 
+                    <img class="TOT-logo" src="img/TOT Logo.svg" />
+                </a>
+                <div class="frame">
+                    <div class="frame-2">
+                        <div class="menu-button" data-lang="ru">
+                            <div class="text-wrapper">О проекте</div>
+                        </div>
+                        <div class="menu-button" data-lang="ru">
+                            <div class="text-wrapper">Потенциал</div>
+                        </div>
+                        <div class="menu-button" data-lang="ru">
+                            <div class="text-wrapper">Раунд инвестиций</div>
+                        </div>
+                        <div class="menu-button" data-lang="ru">
+                            <div class="text-wrapper">Контакты</div>
+                        </div>
+                        <div class="menu-button" data-lang="en">
+                            <div class="text-wrapper">About</div>
+                        </div>
+                        <div class="menu-button" data-lang="en">
+                            <div class="text-wrapper">Potential</div>
+                        </div>
+                        <div class="menu-button" data-lang="en">
+                            <div class="text-wrapper">Investment Round</div>
+                        </div>
+                        <div class="menu-button" data-lang="en">
+                            <div class="text-wrapper">Contacts</div>
+                        </div>
                     </div>
-                    <div class="menu-button" data-lang="ru">
-                        <div class="text-wrapper">Потенциал</div>
-                    </div>
-                    <div class="menu-button" data-lang="ru">
-                        <div class="text-wrapper">Раунд инвестиций</div>
-                    </div>
-                    <div class="menu-button" data-lang="ru">
-                        <div class="text-wrapper">Контакты</div>
-                    </div>
-                    <div class="menu-button" data-lang="en">
-                        <div class="text-wrapper">About</div>
-                    </div>
-                    <div class="menu-button" data-lang="en">
-                        <div class="text-wrapper">Potential</div>
-                    </div>
-                    <div class="menu-button" data-lang="en">
-                        <div class="text-wrapper">Investment Round</div>
-                    </div>
-                    <div class="menu-button" data-lang="en">
-                        <div class="text-wrapper">Contacts</div>
-                    </div>
-                </div>
-                <div class="frame-wrapper">
-                    <div class="frame-3">
-                        <div class="language-flag"><div class="ellipse"></div></div>
-                        <div class="text-wrapper-2">Рус</div>
-                        <img class="icon-dropdown" src="img/Vector 2 (Stroke).svg" />
-                    </div>
-                    <!-- Dropdown меню для переключения языка -->
-                    <div class="language-dropdown">
-                        <button class="language-option" data-lang="ru">
-                            <div class="ellipse"></div> Русский
-                        </button>
-                        <button class="language-option" data-lang="en">
-                            <div class="ellipse"></div> English
-                        </button>
+                    <div class="frame-wrapper">
+                        <div class="frame-3">
+                            <div class="language-flag" style="background-image: url('img/rus.svg');"></div>
+                            <div class="text-wrapper-2">Рус</div>
+                            <img class="icon-dropdown" src="img/Vector 2 (Stroke).svg" />
+                        </div>
+                        <div class="language-dropdown">
+                            <button class="language-option" data-lang="ru">
+                                <div class="language-flag" style="background-image: url('img/rus.svg');"></div> 
+                                Русский
+                            </button>
+                            <button class="language-option" data-lang="en">
+                                <div class="language-flag" style="background-image: url('img/eng.svg');"></div>
+                                English
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
     </section>
 
-    <div id="top"></div>
+    <!-- Секция хиро -->
+<main class="background-image">
+    <section class="hero-container">
+        <div class="hero-content">
+            <header class="header">
+                <img class="container" src="img/Container.svg" alt="Логотип мультиброкерской экосистемы" />
+                <h1 class="title" data-lang="ru">Первая мультиброкерская экосистема</h1>
+                <h1 class="title" data-lang="en">The First Multi-Broker Ecosystem</h1>
+            </header>
+            <p class="description" data-lang="ru">Торгуй. Обучай. Твори. Всё в одном месте.</p>
+            <p class="description" data-lang="en">Trade. Learn. Create. All in one place.</p>
+            <div class="button-container">
+                <!-- Кнопка Запросить презентацию -->
+                <button class="button-big-classic" onclick="window.open('Питч_русс.pdf', '_blank')" data-lang="ru">
+                    Запросить презентацию
+                </button>
+                <button class="button-big-classic" onclick="window.open('Питч_англ.pdf', '_blank')" data-lang="en">
+                    Request Presentation
+                </button>
 
+                <!-- Кнопка Связаться с командой -->
+                <button class="button-big-outline" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSepxg-kvVxeZqhKA_bnhKKQf-z73vcy0xZMofaEwBlPdazt5Q/viewform', '_blank')" data-lang="ru">
+                    Связаться с командой
+                </button>
+                <button class="button-big-outline" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSepxg-kvVxeZqhKA_bnhKKQf-z73vcy0xZMofaEwBlPdazt5Q/viewform', '_blank')" data-lang="en">
+                    Contact the team
+                </button>
+            </div>
+        </div>
+    </section>
+</main>
+    <section class="platform-info">
+        <div class="platform-info_content">
+            <h1 class="platform-info_title" data-lang="ru">О платформе</h1>
+            <h1 class="platform-info_title" data-lang="en">About the platform</h1>
+
+            <p class="platform-info_description" data-lang="ru">
+            ТОТ — это масштабируемая мультиброкерская экосистема, которая объединяет инвесторов, управляющих, брокеров и (подписки + комиссии + реклама), что снижает CAC и увеличивает LTV.
+            </p>
+            <p class="platform-info_description" data-lang="en">
+            TOT is a scalable multi-broker ecosystem that brings together investors, managers, brokers, and (subscriptions + commissions + advertising), reducing CAC and increasing LTV.
+            </p>
+        </div>
+        <img class="platform-info_image" src="img/container (1).svg" alt="Иллюстрация платформы ТОТ" />
+    </section>
+    <!-- Заголовок секции -->
+<section class="section-title-container">
+    <h2 class="section-title" data-lang="ru">TOT решает реальные боли рынка</h2>
+    <h2 class="section-title" data-lang="en">TOT Solves Real Market Pain Points</h2>
+</section>
+
+<!-- Секция с проблемами и решениями -->
+<section class="problems-solutions">
+    <div class="content-container">
+        <!-- Проблемы -->
+        <div class="problems-container">
+            <!-- Проблема 1 -->
+            <div class="problem-item">
+                <div class="ellipse"></div>
+                <div class="problem-image-container">
+                    <img class="problem-image" src="img/problems1.svg" alt="Проблема 1" />
+                </div>
+                <div class="problem-text-container">
+                    <h3 class="problem-title" data-lang="ru">Высокие риски:</h3>
+                    <h3 class="problem-title" data-lang="en">High Risks:</h3>
+                    <p class="problem-description" data-lang="ru">Зависимость от одного брокера приводит к риску банкротства и ограничивает возможности.</p>
+                    <p class="problem-description" data-lang="en">Dependence on one broker leads to the risk of bankruptcy and limits opportunities.</p>
+                </div>
+                <div class="badge">Проблема</div>
+            </div>
+
+            <!-- Проблема 2 -->
+            <div class="problem-item">
+                <div class="ellipse"></div>
+                <div class="problem-image-container">
+                    <img class="problem-image" src="img/problems2.svg" alt="Проблема 2" />
+                </div>
+                <div class="problem-text-container">
+                    <h3 class="problem-title" data-lang="ru">Скрытые комиссии:</h3>
+                    <h3 class="problem-title" data-lang="en">Hidden Fees:</h3>
+                    <p class="problem-description" data-lang="ru">Традиционные брокеры и системы снижают доходность инвесторов на 4–8% ежегодно.</p>
+                    <p class="problem-description" data-lang="en">Traditional brokers and systems reduce investor returns by 4–8% annually.</p>
+                </div>
+                <div class="badge">Проблема</div>
+            </div>
+
+            <!-- Проблема 3 -->
+            <div class="problem-item">
+                <div class="ellipse"></div>
+                <div class="problem-image-container">
+                    <img class="problem-image" src="img/problems3.svg" alt="Проблема 3" />
+                </div>
+                <div class="problem-text-container">
+                    <h3 class="problem-title" data-lang="ru">Ограниченный доступ:</h3>
+                    <h3 class="problem-title" data-lang="en">Limited Access:</h3>
+                    <p class="problem-description" data-lang="ru">Примерно 50% инвесторов лишены доступа к глобальному рынку.</p>
+                    <p class="problem-description" data-lang="en">About 50% of investors are denied access to the global market.</p>
+                </div>
+                <div class="badge">Проблема</div>
+            </div>
+
+            <!-- Проблема 4 -->
+            <div class="problem-item">
+                <div class="ellipse"></div>
+                <div class="problem-image-container">
+                    <img class="problem-image" src="img/problems4.svg" alt="Проблема 4" />
+                </div>
+                <div class="problem-text-container">
+                    <h3 class="problem-title" data-lang="ru">Фрагментация:</h3>
+                    <h3 class="problem-title" data-lang="en">Fragmentation:</h3>
+                    <p class="problem-description" data-lang="ru">Инвесторы тратят до 40% времени, работая одновременно с 6–8 платформами.</p>
+                    <p class="problem-description" data-lang="en">Investors spend up to 40% of their time working across 6–8 platforms simultaneously.</p>
+                </div>
+                <div class="badge">Проблема</div>
+            </div>
+        </div>
+
+        <!-- Решения -->
+        <div class="solutions-container">
+            <!-- Решение 1 -->
+            <div class="solution-item">
+                <div class="solution-image-container">
+                    <img class="solution-image" src="img/solution1.svg" alt="Решение 1" />
+                </div>
+                <div class="solution-text-container">
+                    <h3 class="solution-title" data-lang="ru">Мультиброкерская модель:</h3>
+                    <h3 class="solution-title" data-lang="en">Multi-broker Model:</h3>
+                    <p class="solution-description" data-lang="ru">Один аккаунт дает доступ к 100+ брокерам и мировым биржам.</p>
+                    <p class="solution-description" data-lang="en">One account gives access to 100+ brokers and global exchanges.</p>
+                </div>
+                <div class="badge">Решение</div>
+            </div>
+
+            <!-- Решение 2 -->
+            <div class="solution-item">
+                <div class="solution-image-container">
+                    <img class="solution-image" src="img/solution2.svg" alt="Решение 2" />
+                </div>
+                <div class="solution-text-container">
+                    <h3 class="solution-title" data-lang="ru">Прозрачность и доходность:</h3>
+                    <h3 class="solution-title" data-lang="en">Transparency & Profitability:</h3>
+                    <p class="solution-description" data-lang="ru">0.1% фиксированная комиссия за ввод/вывод, 90% ребейтов управляющим.</p>
+                    <p class="solution-description" data-lang="en">0.1% fixed deposit/withdrawal fee, 90% rebates to managers.</p>
+                </div>
+                <div class="badge">Решение</div>
+            </div>
+
+            <!-- Решение 3 -->
+            <div class="solution-item">
+                <div class="solution-image-container">
+                    <img class="solution-image" src="img/solution3.svg" alt="Решение 3" />
+                </div>
+                <div class="solution-text-container">
+                    <h3 class="solution-title" data-lang="ru">Глобальный охват и локализация под регуляторов:</h3>
+                    <h3 class="solution-title" data-lang="en">Global Coverage & Regulatory Compliance:</h3>
+                    <p class="solution-description" data-lang="ru">Доступ к 90-95% мирового рынка; адаптация к MiFID II, SEC, ASIC и 90+ юрисдикциям.</p>
+                    <p class="solution-description" data-lang="en">Access to 90-95% of the global market; adaptation to MiFID II, SEC, ASIC, and 90+ jurisdictions.</p>
+                </div>
+                <div class="badge">Решение</div>
+            </div>
+
+            <!-- Решение 4 -->
+            <div class="solution-item">
+                <div class="solution-image-container">
+                    <img class="solution-image" src="img/solution4.svg" alt="Решение 4" />
+                </div>
+                <div class="solution-text-container">
+                    <h3 class="solution-title" data-lang="ru">Единая экосистема:</h3>
+                    <h3 class="solution-title" data-lang="en">Unified Ecosystem:</h3>
+                    <p class="solution-description" data-lang="ru">Инвестируй, копируй сделки, продавай стратегии, создавай и покупай курсы, общайся всё в одном месте.</p>
+                    <p class="solution-description" data-lang="en">Invest, copy trades, sell strategies, create and buy courses, communicate—all in one place.</p>
+                </div>
+                <div class="badge">Решение</div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Секция маршрутизатора капитала и знаний -->
+<section class="capital-and-knowledge">
+    <!-- Заголовок секции и бейдж "Как это работает" -->
+    <div class="header">
+        <h2 class="title">Маршрутизатор капитала и знаний</h2>
+        <div class="badge">Как это работает?</div>
+    </div>
+
+    <!-- Таблица -->
+    <div class="table-container">
+        <div class="row">
+            <!-- Пустая строка в первом столбце -->
+            <div class="cell"></div>
+            <!-- Столбец с заголовками -->
+            <div class="cell title-column">
+                <div class="title-column-text">Что происходит</div>
+            </div>
+            <div class="cell title-column">
+                <div class="title-column-text">Ценность для участников</div>
+            </div>
+        </div>
+
+        <!-- Шаги -->
+        <div class="row">
+            <div class="cell step-column">
+                <div class="step">
+                    <div class="step-image-container">
+                        <img src="img/step1.svg" alt="Шаг 1" class="step-image">
+                    </div>
+                    <div class="step-details">
+                        <div class="step-badge">Шаг 1</div>
+                        <h3 class="step-title">Управляющий → брокер</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="cell">
+                <p class="info-text">Подключает счёт у любого необходимого брокера внутри TOT</p>
+            </div>
+            <div class="cell">
+                <p class="value-text">Привычный терминал + лучшие условия + поток новых инвесторов</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="cell step-column">
+                <div class="step">
+                    <div class="step-image-container">
+                        <img src="img/step2.svg" alt="Шаг 2" class="step-image">
+                    </div>
+                    <div class="step-details">
+                        <div class="step-badge">Шаг 2</div>
+                        <h3 class="step-title">Инвестор → стратегии</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="cell">
+                <p class="info-text">Из одного кабинета распределяет капитал по стратегиям, продуктам и инструментам разных брокеров</p>
+            </div>
+            <div class="cell">
+                <p class="value-text">Диверсификация и единый интерфейс управления</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="cell step-column">
+                <div class="step">
+                    <div class="step-image-container">
+                        <img src="img/step3.svg" alt="Шаг 3" class="step-image">
+                    </div>
+                    <div class="step-details">
+                        <div class="step-badge">Шаг 3</div>
+                        <h3 class="step-title">TOT → комиссии</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="cell">
+                <p class="info-text">Автоматически распределяет комиссии брокеру, управляющему, TOT</p>
+            </div>
+            <div class="cell">
+                <p class="value-text">Прозрачная и предсказуемая монетизация</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="cell step-column">
+                <div class="step">
+                    <div class="step-image-container">
+                        <img src="img/step4.svg" alt="Шаг 4" class="step-image">
+                    </div>
+                    <div class="step-details">
+                        <div class="step-badge">Шаг 4</div>
+                        <h3 class="step-title">Лидеры мнений</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="cell">
+                <p class="info-text">Делятся портфелем, запускают подписки и партнёрку</p>
+            </div>
+            <div class="cell">
+                <p class="value-text">Монетизируют экспертизу, расширяют аудиторию</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="cell step-column">
+                <div class="step">
+                    <div class="step-image-container">
+                        <img src="img/step5.svg" alt="Шаг 5" class="step-image">
+                    </div>
+                    <div class="step-details">
+                        <div class="step-badge">Шаг 5</div>
+                        <h3 class="step-title">Масштабирование</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="cell">
+                <p class="info-text">TOT включает геймификацию и Ads-кабинет</p>
+            </div>
+            <div class="cell">
+                <p class="value-text">Ускоряет привлечение клиентов и оборот капитала</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Нижний контейнер -->
+    <div class="bottom-container">
+        <div class="left-section">
+            <h3 class="section-title">Мы не замещаем, а усиливаем брокеров</h3>
+            <p class="section-description">TOT соединяет управляющих, брокеров, инвесторов и блогеров в одном месте — превращая движение денег и знаний в масштабируемый бизнес с понятной моделью дохода</p>
+        </div>
+        <div class="right-section">
+            <div class="card-divider"></div>
+            <div class="card">
+                <img src="img/manager.svg" alt="Управляющий" class="card-image">
+                <h4 class="card-title">Управляющий</h4>
+                <p class="card-text">остаётся в своём терминале, где и привык работать</p>
+            </div>
+            <div class="card-divider"></div>
+            <div class="card">
+                <img src="img/investor.svg" alt="Инвестор" class="card-image">
+                <h4 class="card-title">Инвестор</h4>
+                <p class="card-text">видит консолидированный портфель разных брокеров</p>
+            </div>
+            <div class="card-divider"></div>
+            <div class="card">
+                <img src="img/broker.svg" alt="Брокер" class="card-image">
+                <h4 class="card-title">Брокер</h4>
+                <p class="card-text">получает дополнительный оборот и маркетинг без конфликта интересов</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <div id="top"></div>
 </body>
 </html>

@@ -1,10 +1,80 @@
+/* Основные цвета */
+:root {
+    --primarymain: #FF2B00; /* Основной оранжевый */
+    --primarylight: #FF7255; /* Светлый оранжевый */
+    --primarydark: #AA1D00; /* Темный оранжевый */
+    --gray1: #868686; /* Серый */
+    --gray2: #C2C2C2; /* Более светлый серый */
+    --background-light: #F4F4F4; /* Светлый фон */
+    --green: #25DEB5; /* Зеленый */
+}
+
+/* Загружаем шрифты */
+@font-face {
+    font-family: 'TT Travels Next-Bold';
+    src: url('font/TT_Travels_Next_Bold.eot');
+    src: url('font/TT_Travels_Next_Bold.eot?#iefix') format('embedded-opentype'),
+         url('font/TT_Travels_Next_Bold.woff2') format('woff2'),
+         url('font/TT_Travels_Next_Bold.woff') format('woff'),
+         url('font/TT_Travels_Next_Bold.ttf') format('truetype'),
+         url('font/TT_Travels_Next_Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Travels Next-Medium';
+    src: url('font/TT_Travels_Next_Medium.eot');
+    src: url('font/TT_Travels_Next_Medium.eot?#iefix') format('embedded-opentype'),
+         url('font/TT_Travels_Next_Medium.woff2') format('woff2'),
+         url('font/TT_Travels_Next_Medium.woff') format('woff'),
+         url('font/TT_Travels_Next_Medium.ttf') format('truetype'),
+         url('font/TT_Travels_Next_Medium.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Применяем шрифты */
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Заголовок с использованием TT Travels Next */
+.title {
+    font-family: 'TT Travels Next-Bold', sans-serif;
+    font-size: 40px;
+    color: #000000;
+}
+
+/* Для других элементов */
+.description {
+    font-family: 'Open Sans', sans-serif;
+    color: #858585;
+    font-size: 16px;
+    text-align: center;
+    line-height: 19px;
+}
+
+button {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+}
+
+/* Общие стили для хедера */
 .header-invest {
     display: flex;
     height: 72px;
     align-items: flex-start;
-    justify-content: center;  /* Оставьте здесь для выравнивания элементов по обе стороны */
+    justify-content: center;
     gap: 10px;
-    padding: 13px 0px;
+    padding: 0px 0px;
     background-color: #ffffff;
     position: fixed;
     top: 0;
@@ -15,7 +85,7 @@
 .header-invest .frame {
     display: flex;
     max-width: 1240px;
-    justify-content: flex-end;  /* Это изменяет выравнивание кнопок справа */
+    justify-content: flex-end;
     flex: 1;
     flex-grow: 1;
     align-items: center;
@@ -28,23 +98,16 @@
     height: 30px;
 }
 
-.header-invest .div {
-    display: inline-flex;
-    justify-content: flex-end;
-    gap: 30px;
-    align-items: center;
-    position: relative;
-}
-
 .header-invest .frame-2 {
     display: inline-flex;
     gap: 16px;
     flex: 0 0 auto;
     align-items: center;
     position: relative;
-    margin-right: 30px;  /* Отступ справа до кнопки переключения языка */
+    margin-right: 30px;
 }
 
+/* Стиль для каждой кнопки в меню */
 .header-invest .menu-button {
     display: inline-flex;
     align-items: center;
@@ -53,15 +116,17 @@
     padding: 5px 10px;
     position: relative;
     flex: 0 0 auto;
-    cursor: pointer;  /* Устанавливаем курсор в виде руки */
-    color: #868686;  /* Цвет текста */
-    font-family: 'Open Sans', sans-serif;  /* Шрифт Open Sans */
-    font-size: 16px;  /* Размер шрифта */
-    line-height: 19px;  /* Высота строки */
+    cursor: pointer;
+    color: #868686;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 19px;
 }
+
 .header-invest .menu-button:hover {
-    color: #000000;  /* Цвет текста при наведении (можно выбрать другой) */
+    color: #000000;
 }
+
 .header-invest .text-wrapper {
     position: relative;
     width: fit-content;
@@ -74,150 +139,8 @@
     white-space: nowrap;
     font-style: normal;
 }
-.header-invest .text-wrapper:hover {
-    color: #000000;  /* Цвет текста при наведении */
-}
 
-.header-invest .frame-wrapper {
-    display: inline-flex;
-    gap: 14px;
-    flex: 0 0 auto;
-    align-items: center;
-    position: relative;
-}
-
-.header-invest .frame-3 {
-    display: inline-flex;
-    gap: 8px;
-    padding: 9px 7px;
-    flex: 0 0 auto;
-    background-color: #F4F4F4 ;
-    border-radius: 90px;
-    overflow: hidden;
-    align-items: center;
-    position: relative;
-    cursor: pointer;  /* Устанавливаем курсор в виде руки */
-}
-
-.header-invest .language-rus {
-    position: relative;
-    width: 28px;
-    height: 28px;
-    background-image: url(./img/rus.svg);
-    background-size: cover;
-    background-position: 50% 50%;
-}
-.header-invest .language-eng {
-    position: relative;
-    width: 28px;
-    height: 28px;
-    background-image: url(./img/eng.svg);
-    background-size: cover;
-    background-position: 50% 50%;
-}
-
-.header-invest .ellipse {
-    height: 28px;
-    border-radius: 14px;
-    border: 1px solid var(--primarydark);
-}
-
-.header-invest .text-wrapper-2 {
-    position: relative;
-    width: fit-content;
-    font-family: var(--desktop-body-text-open-sans-14-font-family);
-    font-weight: var(--desktop-body-text-open-sans-14-font-weight);
-    color: #000000;
-    font-size: var(--desktop-body-text-open-sans-14-font-size);
-    letter-spacing: var(--desktop-body-text-open-sans-14-letter-spacing);
-    line-height: var(--desktop-body-text-open-sans-14-line-height);
-    white-space: nowrap;
-    font-style: var(--desktop-body-text-open-sans-14-font-style);
-}
-
-.header-invest .frame-3 .icon-dropdown {
-    position: relative;
-    width: 12px;  /* Размер иконки стрелки вниз */
-    height: 12px;  /* Высота иконки стрелки вниз */
-}
-.header-invest .frame-3:hover {
-    background-color: #E0E0E0;  /* Цвет фона при наведении */
-}
-/* Скрытие элементов в зависимости от выбранного языка */
-[data-lang="en"] {
-    display: none;  /* Скрыть все элементы с атрибутом data-lang="en" по умолчанию */
-}
-
-[data-lang="ru"] {
-    display: block;  /* Показать все элементы с атрибутом data-lang="ru" по умолчанию */
-}
-
-/* Показать элементы при переключении языка */
-.lang-en [data-lang="en"] {
-    display: block;  /* Показываем элементы с data-lang="en" */
-}
-
-.lang-ru [data-lang="ru"] {
-    display: block;  /* Показываем элементы с data-lang="ru" */
-}
-
-.lang-en [data-lang="ru"],
-.lang-ru [data-lang="en"] {
-    display: none;  /* Скрываем элементы с противоположным языком */
-}
-
-/* Стили для выпадающего меню */
-.language-dropdown {
-    display: none;
-    position: absolute;
-    top: 50px;
-    right: 0;
-    background-color: #F4F4F4;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    flex-direction: column;
-    gap: 10px;
-    padding: 10px;
-}
-
-.language-option {
-    background: transparent;
-    border: none;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 14px;
-    cursor: pointer;
-    padding: 8px 15px;
-}
-
-.language-option:hover {
-    background-color: #E0E0E0;
-}
-
-.language-dropdown .ellipse {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-size: cover;
-}
-
-/* Стили для отображения флагов */
-.language-option[data-lang="ru"] .ellipse {
-    background-image: url('img/rus.svg');
-}
-
-.language-option[data-lang="en"] .ellipse {
-    background-image: url('img/eng.svg');
-}
-
-/* Скрытие выпадающего меню по умолчанию */
-.language-dropdown.active {
-    display: flex;
-}
-
-/* Стили для основного языка переключателя */
+/* Стили для кнопок выбора языка */
 .header-invest .frame-3 {
     display: inline-flex;
     gap: 8px;
@@ -231,29 +154,714 @@
     cursor: pointer;
 }
 
-.header-invest .language-rus {
+.header-invest .language-flag {
     position: relative;
-    width: 28px;
-    height: 28px;
-    background-image: url(./img/rus.svg);
+    width: 16px;
+    height: 16px;
     background-size: cover;
-    background-position: 50% 50%;
+    background-position: center;
 }
 
 .header-invest .text-wrapper-2 {
-    position: relative;
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     color: #000000;
-    font-weight: normal;
 }
 
-.header-invest .icon-dropdown {
+.header-invest .language-dropdown {
+    display: none; /* Скрыто по умолчанию */
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    border-radius: 5px;
+    width: 150px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+}
+
+.header-invest .language-dropdown.active {
+    display: block; /* Показываем меню при активации */
+}
+
+.header-invest .language-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #868686;
+    background: none;
+    border: none;
+    text-align: left;
+    width: 100%;
+}
+
+.header-invest .language-option:hover {
+    background-color: #F4F4F4;
+    color: #000;
+}
+
+/* Отступы между кнопками */
+.header-invest .language-option + .language-option {
+    margin-top: 2px;
+}
+.header-invest .language-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    border-radius: 5px;
+    width: 115px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    text-align: center;
+    padding: 8px 0;
+}
+
+.header-invest .language-option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+    padding: 8px;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #000000;
+    background: none;
+    border: none;
+    text-align: center;
+    width: 100%;
+}
+
+.header-invest .language-option .language-flag {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+}
+
+.header-invest .frame-3 .language-flag {
+    width: 28px;
+    height: 28px;
+    margin-right: 8px;
+}
+
+/* Стили для фона хиро секции */
+.background-image {
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     position: relative;
-    width: 12px;
-    height: 12px;
+    background-image: url(./img/Background\ Image.svg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
 }
 
-.header-invest .frame-3:hover {
-    background-color: #E0E0E0;
+/* Контейнер хиро, убираем фон */
+.hero-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1280px; /* Растягиваем контейнер по ширине */
+    padding: 20px;
+    position: relative;
+    box-shadow: none; /* Убираем тень */
+    background-color: transparent; /* Убираем фон */
 }
+
+/* Содержимое внутри контейнера */
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 950px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Заголовок */
+.title {
+    position: relative;
+    width: 950px;
+    font-family: "TT Travels Next-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 40px;
+    word-wrap: break-word; /* Позволяет переносить длинные слова */
+}
+
+/* Описание */
+.description {
+    font-family: Open Sans, sans-serif;
+    color: #858585;
+    font-size: 16px;
+    text-align: center;
+    line-height: 19px;
+}
+
+/* Кнопки */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    width: 100%;
+}
+
+/* Кнопка "Запросить презентацию" */
+.button-big-classic {
+    background-color: var(--primarymain);
+    height: 60px;
+    width: 291px;
+    border-radius: 90px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    gap: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Текст кнопки "Запросить презентацию" */
+.button-big-classic .поиск {
+    color: white;; /* Белый цвет для текста */
+    font-size: 18px;
+    font-family: Open Sans;
+    line-height: 20px;
+    width: 100%;
+    text-align: left;
+}
+
+/* Кнопка "Связаться с командой" */
+.button-big-outline {
+    color: #AA1D00;
+    height: 60px;
+    width: 270px;
+    border-radius: 90px;
+    padding-left: 37px;
+    padding-right: 37px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    border: 1px solid var(--primarydark);
+}
+
+/* Текст кнопки "Связаться с командой" */
+.button-big-outline .создатьаккаунт {
+    color: #AA1D00; /* Текст цвета #AA1D00 */
+    font-size: 18px;
+    font-family: Open Sans;
+    line-height: 20px;
+    width: 100%;
+    text-align: left;
+}
+
+/* Эффекты при наведении */
+.button-big-classic:hover {
+    background-color: var(--primarydark);
+    color: white;
+}
+
+.button-big-outline:hover {
+    background-color: var(--primarydark);
+    color: white;
+}
+/* Стили для секции "О платформе" */
+.platform-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* Расстояние между текстом и изображением */
+    padding: 80px 0;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.platform-info_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    gap: 20px;
+    max-width: 600px; /* Ширина блока с текстом */
+    text-align: left; /* Центрирование текста */
+}
+
+.platform-info_title {
+    font-family: "TT Travels Next-Bold", Helvetica;
+    font-size: 36px;
+    color: #000;
+    line-height: 40px;
+}
+
+.platform-info_description {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: #858585;
+    line-height: 19px;
+    width: 100%;
+}
+
+/*Секция проблемы и решения */
+/* Стили для заголовка */
+.section-title-container {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Заголовок секции */
+.section-title {
+    font-size: 32px;
+    font-family: 'TT Travels Next', sans-serif;
+    color: #000;
+    line-height: 35px;
+    margin: 0;
+}
+
+/* Заголовок для русского текста */
+.section-title[data-lang="ru"] {
+    font-weight: bold;
+}
+
+/* Заголовок для английского текста */
+.section-title[data-lang="en"] {
+    font-weight: normal;
+    font-style: italic;
+}
+/* фон для картинки в карточке пробелмы */
+.ellipse {
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    background-image: url('img/Ellipse 50.svg');  /* Фоновое изображение для эллипса */
+    background-size: cover;
+    transform: rotate(38deg);
+    border-radius: 50%;
+    filter: blur(10px);
+    top: 10px;
+    left: -10px;
+}
+
+/* Стили для секции "Проблемы и решения" */
+.problems-solutions {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    padding: 60px 0;
+    align-items: center;
+    width: 100%;
+}
+
+/* Контейнер для проблем и решений */
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    width: 1240px;
+    margin: 0 auto; /* Центрируем секцию */
+}
+
+/* Контейнеры для проблем и решений */
+.problems-container,
+.solutions-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 570px; /* Одинаковая ширина для каждой колонки */
+}
+
+/* Карточки проблемы и решения */
+.problem-item,
+.solution-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    padding: 26px;
+    border-radius: 20px;
+    height: 183px;
+    width: 605px;
+    position: relative;
+}
+
+/* Карточки проблемы */
+.problem-item {
+    background-color: #f4f4f4;
+}
+
+/* Карточки решения */
+.solution-item {
+    background-color: #ff7155;
+}
+
+/* Изображения в карточках */
+.problem-image-container,
+.solution-image-container {
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    left: 25px;
+    top: 50px;
+}
+
+.problem-image-container img,
+.solution-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Тексты в карточках */
+.problem-text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    width: 394px;
+    position: absolute;
+    left: 186px;
+    top: 54px;
+}
+.solution-text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    width: 394px;
+    position: absolute;
+    left: 186px;
+    top: 54px;
+    color: white;
+}
+
+/* Заголовки */
+.problemtitle {
+    width: 394px;
+    left: 186px;
+    top: 54px;
+    font-size: 18px;
+    font-family: Open Sans, sans-serif;
+    line-height: 20px;
+    text-align: left;
+    color: #000; /* Черный цвет заголовка в карточках проблемы */
+}
+
+.solutiontitle {
+    width: 394px;
+    left: 186px;
+    top: 54px;
+    font-size: 18px;
+    font-family: Open Sans, sans-serif;
+    line-height: 20px;
+    text-align: left;
+    color: #fff; /* Белый цвет заголовка в карточках решения */
+}
+
+/* Описания */
+.problemdescription {
+    width: 394px;
+    left: 186px;
+    top: 54px;
+    font-size: 14px;
+    font-family: Open Sans, sans-serif;
+    line-height: 16px;
+    text-align: left;
+    color: #868686; /* Темно-серый текст в карточках проблемы */
+}
+
+.solutiondescription {
+    width: 394px;
+    left: 186px;
+    top: 54px;
+    font-size: 14px;
+    font-family: Open Sans, sans-serif;
+    line-height: 16px;
+    text-align: left;
+    color: #fff; /* Белый цвет текста в карточках решения */
+}
+
+/* Плашки (бейджи) */
+.badge {
+    background-color: #ff2b00;
+    color: white;
+    font-size: 12px;
+    font-family: Open Sans, sans-serif;
+    text-align: center;
+    line-height: 15px;
+    height: 30px;
+    width: 90px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 25px;
+    right: 20px;
+}
+
+/* Плашка для решений */
+.solution-item .badge {
+    background-color: #25de85; /* Зеленая плашка для решений */
+}
+
+/* Стили для секции "Capital and Knowledge" */
+.capital-and-knowledge {
+    width: 1240px;
+    margin: 0 auto;
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+/* Заголовок секции и бейдж "Как это работает" */
+.capital-and-knowledge .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.capital-and-knowledge .title {
+    text-align: left;
+    position: relative;
+    font-size: 32px;
+    font-family: 'TT Travels Next', sans-serif;
+    color: #000;
+    line-height: 35px;
+    margin: 0;
+    width: 715px;
+}
+
+.capital-and-knowledge .badge {
+    position: relative;
+    margin-top: -40px;
+    background-color: #FF2B00;
+    color: #fff;
+    width: 135px;
+    height: 30px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    line-height: 30px; /* Центрируем текст по вертикали */
+}
+
+/* Таблица */
+.table-container {
+    position: relative;
+    width: 1240px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.table-container .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    height: 90px; /* Установим высоту строк */
+    margin-bottom: 30px;
+    border-bottom: 1px solid #e3e3e3; /* Добавляем разделительные линии между строками */
+}
+
+.table-container .cell {
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+}
+
+.table-container .step-column {
+    flex: 2;
+}
+
+.table-container .title-column {
+    width: 320px;
+    font-size: 14px;
+    color: #858585;
+    text-align: left;
+    margin-top: 50px;
+
+}
+
+.table-container .title-column-text {
+    font-weight: medium;
+}
+
+
+.table-container .step {
+    display: flex;
+    align-items: left;
+}
+
+.table-container .step-image-container {
+    margin-right: 50px;
+    margin-top: -20px;
+}
+
+.table-container .step-image {
+    align-items: left;
+    width: 120px;
+    height: 90px;
+    object-fit: contain;
+}
+
+.table-container .step-badge {
+    background-color: #000;
+    color: #fff;
+    border-radius: 30px;
+    font-size: 12px;
+    width: 65px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px; /* Центрируем текст по вертикали */
+    margin-right: 20px; /* Сдвигаем бейдж влево */
+    margin-top: 0; /* Убираем верхний отступ */
+}
+
+.table-container .step-title {
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.table-container .step-description {
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    color: #000;
+    width: 355px; /* Ширина текста */
+    text-align: left;
+    line-height: 20px;
+}
+
+.table-container .info-text,
+.table-container .value-text {
+    width: 320px;
+    height: auto;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    color: black;
+}
+
+/* Нижний контейнер */
+.bottom-container {
+    width: 1240px;
+    height: 250px;
+    align-items: center;
+    background-color: #f4f4f4;
+    border-radius: 20px;
+    display: flex;
+    padding: 34px 41px;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.bottom-container .left-section {
+    width: 380px;
+}
+
+.bottom-container .section-title {
+    font-size: 24px;
+    line-height: 28px;
+    font-family: 'TT Travels Next', sans-serif;
+    color: #000;
+    width: 380px;
+    height: 60px;
+}
+
+.bottom-container .section-description {
+    font-size: 14px;
+    color: #858585;
+    width: 380px;
+    height: 65px;
+    line-height: 16px;
+    text-align: left;
+    margin-top: 30px;
+}
+
+.bottom-container .right-section {
+    display: flex;
+    gap: 10px;
+}
+
+.bottom-container .card {
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.bottom-container .card-image {
+    width: 86px;
+    height: 86px;
+}
+
+.bottom-container .card-title {
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.bottom-container .card-text {
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    color: #afafaf;
+    text-align: left;
+    width: 200px;
+    line-height: 16px;
+}
+
+.bottom-container .card-divider {
+    height: 150px;
+    border-left: 1px solid #b8b8b8;
+    margin: 0 20px;
+}
+
+/* Общие стили */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h2, h3, h4, p {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.table-container .row:last-child .cell {
+    border-bottom: none;
+}
+
+
