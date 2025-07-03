@@ -18,31 +18,22 @@ document.addEventListener('DOMContentLoaded', function () {
             languageText.textContent = 'Рус';
         } else {
             languageFlag.style.backgroundImage = 'url("img/eng.svg")';
-            languageText.textContent = 'English';
+            languageText.textContent = 'Eng';
         }
 
-        // Скрываем/показываем элементы в зависимости от языка, кроме кнопок выбора языка
+        // Скрываем/показываем элементы в зависимости от языка
         const elements = document.querySelectorAll('[data-lang]');
         elements.forEach(element => {
-            // Не скрываем кнопки выбора языка в дропдауне
-            if (element.classList.contains('language-option')) {
-                element.style.display = 'block';
+            if (element.getAttribute('data-lang') === language) {
+                element.style.display = 'block'; // Показываем элементы для выбранного языка
             } else {
-                if (element.getAttribute('data-lang') === language) {
-                    element.style.display = 'block'; // Показываем элементы для выбранного языка
-                } else {
-                    element.style.display = 'none'; // Скрываем элементы для другого языка
-                }
+                element.style.display = 'none'; // Скрываем элементы для другого языка
             }
         });
-
-        // Закрываем меню
-        languageDropdown.classList.remove('active');
     }
 
     // Открыть/закрыть меню при клике на кнопку в хедере
     languageButton.addEventListener('click', function() {
-        // Переключаем класс active для показа/скрытия дропдауна
         languageDropdown.classList.toggle('active');
     });
 
@@ -51,6 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
         option.addEventListener('click', function() {
             const selectedLang = option.getAttribute('data-lang');
             switchLanguage(selectedLang);
+            languageDropdown.classList.remove('active'); // Закрываем меню после выбора языка
         });
     });
 

@@ -71,7 +71,7 @@ button {
 .header-invest {
     display: flex;
     height: 72px;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     gap: 10px;
     padding: 0px 0px;
@@ -859,9 +859,349 @@ img {
     height: auto;
 }
 
-
 .table-container .row:last-child .cell {
     border-bottom: none;
 }
+/* Стили для секции "Основа нашей мощности" */
+.power-base-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0;
+    max-width: 1240px;
+    margin: 0 auto;
+}
 
+/* Левый блок с текстом */
+.text-container {
+    width: 600px;
+    height: 150px;
+}
 
+.text-container .title {
+    text-align: left;
+    font-size: 32px;
+    color: #000;
+    font-family: 'TT Travels Next', sans-serif;
+    margin-bottom: 40px;
+}
+
+.text-container .description {
+    text-align: left;
+    font-size: 16px;
+    color: #868686;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+/* Картинка в левой секции */
+.image-container {
+    position: absolute;
+    margin-top: 250px;
+    width: 500px;
+    height: 400px;
+}
+
+.image-container .image {
+    width: 100%;
+    height: auto;
+}
+
+/* Правая секция с технологической глубиной */
+.technology-depth {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Бейдж для технологической глубины */
+.technology-depth .inf .badge {
+    position: relative;
+    background-color: #000; /* Черный цвет бейджа */
+    color: #fff; /* Белый текст */
+    width: 180px; /* Ширина бейджа */
+    height: 30px; /* Высота бейджа */
+    border-radius: 15px; /* Закругленные углы */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 20px;
+    line-height: 30px; /* Выровнять текст по вертикали */
+}
+
+.technology-depth .inf .text {
+    font-size: 18px;
+    color: #000;
+    font-family: 'TT Travels Next', sans-serif;
+    margin-bottom: 20px;
+}
+
+/* Модули */
+.modules-container {
+    display: flex;
+    flex-wrap: wrap; /* Элементы могут переноситься на новую строку */
+    gap: 0px 0px; /* Уменьшены отступы между модулями */
+    justify-content: space-between; /* Выравнивание модулей по горизонтали */
+}
+
+.module {
+    position: relative;
+    display: flex;
+    align-items: center; /* Выровнять иконку и текст по вертикали */
+    gap: 10px; /* Расстояние между иконкой и текстом */
+    width: 18%; /* Уменьшено, чтобы вмещалось 5 элементов в ряд */
+    height: 360px;
+    margin-bottom: 50px; /* Отступ между модулями по вертикали */
+}
+
+.module-icon {
+    position: absolute;
+    margin-top: 20px;
+    margin-left: -35px;
+    width: 22px; /* Размер иконки */
+    height: 14px; /* Размер иконки */
+}
+
+.module-info {
+    display: flex;
+    flex-direction: column; /* Заголовок и описание будут располагаться по вертикали */
+}
+
+.module-info .module-title {
+    font-size: 18px;
+    color: #000;
+    font-family: 'TT Travels Next', sans-serif;
+}
+
+.module-info .module-description {
+    font-size: 14px;
+    color: #858585;
+    word-break: break-word;
+    white-space: normal;
+    width: 100%;
+    display: block;
+    max-width: 255px;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 5px;
+}
+
+/* Кнопка запроса презентации */
+.request-presentation-btn {
+    margin-top: 50px;
+    display: flex;
+    justify-content: left;
+    gap: 20px;
+}
+
+.button-big-classic {
+    background-color: #FF2B00;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.button-big-classic:hover {
+    background-color: #e52b00;
+}
+/* Секция скриншотов */
+/* Контейнер для карусели */
+.carousel-container {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 60px 0;  /* Отступы сверху и снизу */
+    text-align: center; /* Заголовок по центру */
+}
+
+/* Заголовок */
+.carousel-title {
+    font-family: 'TT Travels Next', sans-serif;
+    font-size: 32px;
+    color: #000;
+    margin-bottom: 30px;  /* Отступ снизу для заголовка */
+}
+
+/* Общие стили для карусели */
+.carousel {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    position: relative;
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+/* Карточки скриншотов */
+.carousel-item {
+    position: relative;
+    width: 355px;  /* Боковые карточки */
+    height: 180px;
+    border: 4px solid #868686; /* Рамка */
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.carousel-item.center {
+    width: 500px;  /* Центральная карточка */
+}
+
+/* Эффект при наведении */
+.carousel-item:hover {
+    transform: scale(1.05);
+}
+
+/* Картинка в карточке */
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Кнопка "Смотреть" */
+.view-button {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    display: none;
+}
+
+/* Показ кнопки при наведении на карточку */
+.carousel-item:hover .view-button {
+    display: block;
+}
+
+/* Кнопки для переключения слайдов */
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 30px;
+}
+
+.carousel-nav button {
+    background: none;
+    border: none;
+    color: #000;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+/* Стили для попапа */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#popup-img {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.nav-btn {
+    background: none;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.nav-btn.left {
+    left: 20px;
+}
+
+.nav-btn.right {
+    right: 20px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+/* Показывать только 3 карточки в карусели */
+.carousel {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    justify-content: center;
+    gap: 30px;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.4,0,0.2,1);
+    will-change: transform;
+    gap: 30px;
+}
+
+.carousel-item {
+    flex: 0 0 355px;
+    margin: 0;
+}
+
+.carousel-item.center {
+    flex: 0 0 500px;
+}
+
+@media (max-width: 1100px) {
+    .carousel-item,
+    .carousel-item.center {
+        flex: 0 0 90vw;
+        width: 90vw;
+        max-width: 90vw;
+    }
+    .carousel-track {
+        gap: 10px;
+    }
+}
+
+/* Скрывать лишние карточки только если добавлен класс .visible через JS */
+.carousel-item {
+    display: block;
+}
+.carousel-item:not(.visible) {
+    display: none;
+}
